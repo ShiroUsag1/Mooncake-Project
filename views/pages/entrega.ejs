@@ -1,0 +1,39 @@
+<%- include('../partials/head'); %>
+<body>
+    <div id="info" class= "clearfix">
+        <p id="dados">Receberemos seu pedido com muito carinho e dentro de 24h você receberá um comprovante via WhatsApp da sua compra. Garantimos a entrega dentro do prazo estipulado. 
+            <br>*Atenção: prazo mínimo de análise 24h;
+            <br>**A entrega é sujeita a análise e poderá ser cobrado acrescimo por distancia;
+        </p>
+    <form class="form" action="/request" method="POST">
+    <label for="name"><strong>Nome:</strong> </label>
+    <br>
+         <input id="name" type="text" name="name">
+         <br>
+    <label for="email"> <strong>Email: </strong> </label>
+    <br>
+        <input id="email" type="email" name="email">
+        <br>
+    <label for="pedidos"><strong>Pedido:</strong> </label>
+    <br>
+         <textarea id="pedidos" name="pedido"
+         cols="23" rows="7"></textarea>
+         <br>
+         <br>
+    <div class="popup" onclick="myFunction()">
+        <button type="submit">Ok</button>
+    <span class="popuptext" id="myPopup">Seu pedido foi enviado com sucesso!</span>
+</div>
+    </form> 
+    </div>
+    
+    <%- include('../partials/navlat'); %>
+    <script>
+    function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      </script>
+<%- include('../partials/footer'); %>
+</body>
+</html>
